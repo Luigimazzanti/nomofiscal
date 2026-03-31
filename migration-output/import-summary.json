@@ -1,0 +1,19 @@
+{
+  "clients": {
+    "source": 9,
+    "created": 0
+  },
+  "services": {
+    "source": 9,
+    "created": 0
+  },
+  "periods": {
+    "source": 5,
+    "created": 0
+  },
+  "entriesPdf": {
+    "source": 45,
+    "created": 44,
+    "ambiguos": 48
+  }
+}

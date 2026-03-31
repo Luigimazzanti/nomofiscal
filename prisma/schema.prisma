@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id          String   @id @default(cuid())
+  companyName String
+  createdAt   String
+}
+
+model Service {
+  id        String  @id @default(cuid())
+  name      String
+  basePrice Float
+}
+
+model DailyEntry {
+  id          String  @id @default(cuid())
+  date        String
+  client      String
+  service     String
+  qty         Int
+  price       Float
+  discount    Float
+  subtotalGbp Float
+  subtotalEur Float
+}
+
+model ClosedPeriod {
+  id           String  @id @default(cuid())
+  label        String
+  startDate    String
+  endDate      String
+  serviceCount Int
+  totalGbp     Float
+  totalEur     Float
+  closedAt     String
+}
